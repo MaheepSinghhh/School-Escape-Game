@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title></title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+ 
+  <body>
+    
+  <canvas id = "myCanvas" width="1000" height = "1000"></canvas>
+
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+function myCharacter() {
+ctx.beginPath();
+ctx.arc(130, 130, 10, 0, Math.PI*2);
+ctx.fillStyle = "#0B93DC";
+ctx.fill();
+ctx.closePath();
+
+
+ctx.beginPath();
+ctx.moveTo(130,140);
+ctx.lineTo(130,180);
+ctx.closePath();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(130,180)
+ctx.lineTo(140,190)
+ctx.closePath();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(130,180)
+ctx.lineTo(120,190);
+ctx.closePath();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(130,160);
+ctx.lineTo(140,150);
+ctx.closePath();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(130,160);
+ctx.lineTo(120,150);
+ctx.closePath();
+ctx.stroke();
+}
+
+//document.getElementById("myCanvas").addEventListener("click", myCharacter);
+
+//document.getElementById("myCanvas").addEventListener("click", mySledge,);
+
+function mySledge() { 
+  ctx.beginPath();
+  ctx.moveTo(165,130)
+  ctx.lineTo(140,150)
+  ctx.closePath();
+  ctx.stroke();
+  ctx.fillRect(162,127,5,15)
+}
+
+function myLevelOne() {
+ctx.font = "30px Comic Sans MS";
+ctx.fillStyle = "red";
+ctx.textAlign = "center";
+ctx.fillText("Level One: Sledgehammer", canvas.width/5, canvas.height/2);
+}
+
+
+</script>
+</body>
+</html>
